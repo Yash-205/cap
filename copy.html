@@ -4,7 +4,157 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MyPortfolio</title>
-    <link href="https://fonts.cdnfonts.com/css/syne?styles=24856,24853" rel="stylesheet">
+    <link href="https://fonts.cdnfonts.com/css/syne?styles=169887,24852,24853" rel="stylesheet">
+                
+                
+             
+    <style>
+        body {
+            margin: 0;
+            padding: 0 48px;
+            font-family: 'Syne', sans-serif;
+            background-color: #ECF6FE;
+            color: #381664;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .logo_text {
+            font-size: 24px;
+            font-weight: 900;
+        }
+        .divider{
+            border: 0.1px solid #440A8F;
+            left: 0;
+            position: absolute;
+            width: 100vw;
+        }
+        .pageLinks {
+            display: flex;
+            list-style: none;
+            gap: 24px;
+            margin: 0;
+            padding: 0;
+        }
+
+        .pageLinks li a {
+            text-decoration: none;
+            color: #381664;
+            font-weight: 400;
+            font-size: 16px;
+        }
+
+       
+
+        .hero {
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 36px;
+            font-weight: 700;
+        }
+
+        .hero img {
+            max-width: 100%;
+            border: 1px solid #440A8F;
+        }
+
+        .projects {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 16px;
+        }
+
+        .project-card {
+            text-align: left;
+        }
+
+        .project-card img {
+            border: 1px solid #440A8F;
+            max-width: 100%;
+        }
+
+        .project-card p {
+            margin: 10px 0 0;
+            font-size: 14px;
+            font-weight: 500;
+        }
+
+        .about {
+            text-align: center;
+            padding: 40px;
+        }
+
+        .column{
+            display: flex;
+            gap: 45px;
+        }
+        .ImpactMetris{
+            padding: 0;
+            display: flex;
+            justify-content: space-between;
+            }
+        .ImpactMetris2{
+            font-size: 28px;
+        }
+        .highlight {
+            border-top: 0.1px solid #381664;
+            text-align: left;
+            width: 156px;
+            padding-top: 15px;
+            padding-bottom: 35px;
+        }
+        .highlight p{
+            
+            font-size: 12px;
+            margin: 1px;
+        }
+        .highlight h3{
+            font-size: 30px;
+            margin: 1px;
+        }
+        .footer {
+            display: flex;
+            justify-content: space-between;
+            text-align: center;
+            font-size: 14px;
+        }
+
+        .contact-button {
+            margin-top: 20px;
+            padding: 10px 20px;
+            border: 2px solid #381664;
+            background-color: transparent;
+            color: #381664;
+            font-size: 14px;
+            cursor: pointer;
+            border-radius: 8px;
+        }     
+        
+        /* @media (max-width: 600px) {
+            .navbar {
+                flex-direction: column;
+                text-align: center;
+                gap: 20px;
+            }
+
+            .pageLinks {
+                flex-direction: column;
+                gap: 12px;
+            }
+            
+            .highlights {
+                flex-direction: column;
+            } */
+        
+        }
+    </style>
 </head>
 <body>
     <header class="navbar">
@@ -75,30 +225,30 @@
         <p>Hi, I'm a creative professional specializing in graphic design and web development. I love turning ideas into visually stunning and functional designs.</p>
     </section>
 
-<section class="project-highlights">
-    <h2 style="text-align: center;">Project Highlights</h2>
-    <div style="display: flex; justify-content: space-around; padding: 20px; flex-wrap: wrap;">
-        <div style="text-align: left;">
-            <p>Type of Work</p>
-            <p>Graphic Design</p>
-            <p>Web Design</p>
+    <section class="project-highlights" style="display: flex; flex-direction: column; padding: 40px;">
+        <h2 style="text-align: left; font-size: 1.5rem; margin-bottom: 10px;">Project Highlights</h2>
+        <div style="display: flex; justify-content: space-between; padding-top: 10px;">
+            <div style="text-align: left;">
+                <p style="margin: 4px 0;">Type of Work</p>
+                <p style="margin: 4px 0;">Graphic Design</p>
+                <p style="margin: 4px 0;">Web Design</p>
+            </div>
+            <div style="text-align: left;">
+                <p style="margin: 4px 0;">Team</p>
+                <p style="margin: 4px 0;">Alice Johnson</p>
+                <p style="margin: 4px 0;">Bob Smith</p>
+            </div>
+            <div style="text-align: left;">
+                <p style="margin: 4px 0;">Date</p>
+                <p style="margin: 4px 0;">March 2023</p>
+            </div>
         </div>
-        <div style="text-align: left;">
-            <p>Team</p>
-            <p>Alice Johnson</p>
-            <p>Bob Smith</p>
-        </div>
-        <div style="text-align: left;">
-            <p>Date</p>
-            <p>March 2023</p>
-        </div>
-    </div>
-</section>
+    </section>
 
     <div class="ImpactMetris">
-    <p>Impact Metris</p>
+    <span class="ImpactMetris2">Impact Metris</span>
     <section class="highlights">
-        <div class="column1">
+        <div class="column">
         <div class="highlight">
             <h3>50+</h3>
             <p>Projects Completed</p>
@@ -108,7 +258,7 @@
             <p>Happy Clients</p>
         </div>
         </div>
-        <div class="column2">
+        <div class="column">
         <div class="highlight">
             <h3>10</h3>
             <p>Years of Experience</p>
