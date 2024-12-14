@@ -48,9 +48,6 @@
             font-weight: 400;
             font-size: 16px;
         }
-
-       
-
         .hero {
             text-align: center;
         }
@@ -66,13 +63,14 @@
         }
 
         .projects {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 16px;
+            margin-top: 20px;
+            display: flex;
+            gap: 30px;
         }
 
         .project-card {
             text-align: left;
+            margin-top: 20px;
         }
 
         .project-card img {
@@ -119,6 +117,62 @@
             font-size: 30px;
             margin: 1px;
         }
+        .testimonials  h2 {
+            text-align: center;
+            font-size: 2rem;
+            color: #2a075b; 
+            margin: 1rem 0;
+        }
+
+        .testimonials {
+            padding: 2rem;
+        }
+        .testimonial-container {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            gap: 1.5rem;
+        }
+
+        .testimonial {
+            display: flex;
+            flex-direction: column;
+            background-color: #FFFFFF;
+            border-radius: 8px;
+            padding: 1.5rem;
+          
+            max-width: 250px;
+            border: 1px solid #440A8F;
+        }
+        .above{
+            display: flex;
+        }
+       
+        .testimonial img.avatar {
+          width: 60px;
+          height: 60px;
+          border-radius: 50%;
+          margin-bottom: 0.5rem;
+          border: 1px solid #440A8F
+        }
+        
+        .testimonial h3 {
+          font-size: 1.1rem;
+          color: #2a075b;
+          margin: 0.5rem 0 0.2rem;
+        }
+        
+        .testimonial .position {
+          font-size: 0.9rem;
+          color: #666;
+          margin-bottom: 1rem;
+        }
+        
+        .testimonial .feedback {
+          font-size: 0.9rem;
+          color: #444;
+          line-height: 1.4;
+        }
         .footer {
             display: flex;
             justify-content: space-between;
@@ -136,24 +190,6 @@
             cursor: pointer;
             border-radius: 8px;
         }     
-        
-        /* @media (max-width: 600px) {
-            .navbar {
-                flex-direction: column;
-                text-align: center;
-                gap: 20px;
-            }
-
-            .pageLinks {
-                flex-direction: column;
-                gap: 12px;
-            }
-            
-            .highlights {
-                flex-direction: column;
-            } */
-        
-        }
     </style>
 </head>
 <body>
@@ -174,6 +210,7 @@
     </section>
 
     <section id="projects" class="projects">
+        <div class="row1">
         <div class="project-card">
             <img src="7c6729b0a0d4978924744bb7c3d0e6d2.png" alt="Project A">
             <p>Project A </p>
@@ -189,6 +226,8 @@
             <p>Project C</p>
             <p>Illustration</p>
         </div>
+        </div>
+        <div class="row2">
         <div class="project-card">
             <img src="Project D.png" alt="Project D">
             <p>Project D</p>
@@ -204,6 +243,8 @@
             <p>Project F</p> 
             <p>Animation</p>
         </div>
+        </div>
+        <div class="row3">
         <div class="project-card">
             <img src="Project G.png" alt="Project G">
             <p>Project G</p> 
@@ -218,6 +259,7 @@
             <img src="Project i.png" alt="Project I">
             <p>Project I</p> 
             <p>Video Editing</p>
+        </div>
         </div>
     </section>
 
@@ -270,7 +312,51 @@
         </div>
     </section>
     </div>
-
+    <section class="testimonials">
+    <h2>What Clients Say</h2>
+    <div class="testimonial-container">
+      <div class="testimonial">
+        <div class="above">
+        <img src="avatar1.jpg" alt="Clara Bell" class="avatar">
+        <h3>Clara Bell</h3>
+        <p class="position">CEO, Creative Co.</p>
+        </div>
+        <p class="feedback">Fantastic work! Highly recommend.</p>
+      </div>
+      <div class="testimonial">
+        <div class="above">
+        <img src="avatar2.jpg" alt="David Green" class="avatar">
+        <h3>David Green</h3>
+        <p class="position">Marketing Director, Innovate Inc.</p>
+        </div>
+        <p class="feedback">Delivered beyond expectations.</p>
+      </div>
+      <div class="testimonial">
+        <div class="above">
+        <img src="avatar3.jpg" alt="Evelyn Hart" class="avatar">
+        <h3>Evelyn Hart</h3>
+        <p class="position">Founder, Artistry Studio</p>
+        </div>
+        <p class="feedback">A true professional and talented designer.</p>
+      </div>
+      <div class="testimonial">
+        <div class="above">
+        <img src="avatar4.jpg" alt="Franklin Lee" class="avatar">
+        <h3>Franklin Lee</h3>
+        <p class="position">Project Manager, Design Hub</p>
+        </div>
+        <p class="feedback">Creative and reliable. A pleasure to work with.</p>
+      </div>
+      <div class="testimonial">
+        <div class="above">
+        <img src="avatar5.jpg" alt="Grace Kim" class="avatar">
+        <h3>Grace Kim</h3>
+        <p class="position">Owner, Graceful Designs</p>
+        </div>
+        <p class="feedback">Exceptional quality and attention to detail.</p>
+      </div>
+    </div>
+  </section>
     <div class="divider"></div>
     <footer class="footer">
         <p>&copy; 2023 MyPortfolio</p>
