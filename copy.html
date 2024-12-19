@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MyPortfolio</title>
     <link href="https://fonts.cdnfonts.com/css/syne?styles=169887,24852,24853" rel="stylesheet">
+    <link href="https://fonts.cdnfonts.com/css/familjen-grotesk?styles=170750" rel="stylesheet">
                 
                 
              
@@ -49,11 +50,12 @@
             font-size: 16px;
         }
         .hero {
+            
             text-align: center;
         }
 
         .hero h1 {
-            font-size: 36px;
+            font-size: 120px;
             font-weight: 700;
         }
 
@@ -64,6 +66,11 @@
 
         .projects {
             margin-top: 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+        }
+        .row{
             display: flex;
             gap: 30px;
         }
@@ -83,8 +90,11 @@
             font-size: 14px;
             font-weight: 500;
         }
-
+        .project-name{
+            font-size: 200px;
+        }
         .about {
+            font-size: 50px;
             text-align: center;
             padding: 40px;
         }
@@ -128,50 +138,65 @@
             padding: 2rem;
         }
         .testimonial-container {
+            height: 204px;
+            width: 90vw;
             display: flex;
-            justify-content: space-around;
-            flex-wrap: wrap;
+            overflow-x: scroll;
+
             gap: 1.5rem;
         }
 
         .testimonial {
+            font-family: 'Familjen Grotesk', sans-serif;                                   
+            font-weight: 400;
             display: flex;
             flex-direction: column;
             background-color: #FFFFFF;
-            border-radius: 8px;
-            padding: 1.5rem;
+            border-radius: 20px;
+            padding: 8px;
           
-            max-width: 250px;
+            width: 250px;
             border: 1px solid #440A8F;
         }
         .above{
             display: flex;
+            gap: 20px;
+        }
+        .text{
+            
+            font-size: 12px;
+            display: flex;
+            flex-direction: column;
+            gap: 0;
+            justify-content: center;
         }
        
         .testimonial img.avatar {
           width: 60px;
           height: 60px;
           border-radius: 50%;
-          margin-bottom: 0.5rem;
           border: 1px solid #440A8F
         }
         
         .testimonial h3 {
-          font-size: 1.1rem;
-          color: #2a075b;
-          margin: 0.5rem 0 0.2rem;
+        font-weight: 600;
+        margin: 0;
+        color: #2a075b;
+        line-height: 12px;
         }
         
         .testimonial .position {
-          font-size: 0.9rem;
-          color: #666;
-          margin-bottom: 1rem;
+          color: #381664
+          line-height: 12px;
         }
         
         .testimonial .feedback {
-          font-size: 0.9rem;
-          color: #444;
-          line-height: 1.4;
+            margin-left: 32px;
+            padding-left: 40px;
+            border-left: 1px solid #440A8F;
+            font-weight: 400;
+            font-size: 20px;
+          color: #381664;
         }
         .footer {
             display: flex;
@@ -189,6 +214,7 @@
             font-size: 14px;
             cursor: pointer;
             border-radius: 8px;
+            margin-bottom: 20px;
         }     
     </style>
 </head>
@@ -210,54 +236,54 @@
     </section>
 
     <section id="projects" class="projects">
-        <div class="row1">
+        <div class="row">
         <div class="project-card">
             <img src="7c6729b0a0d4978924744bb7c3d0e6d2.png" alt="Project A">
-            <p>Project A </p>
+            <p class="project-name">Project A </p>
             <p>Graphic Design</p>
         </div>
         <div class="project-card">
             <img src="Project B.png" alt="Project B">
-            <p>Project B </p>
+            <p class="project-name">Project B </p>
             <p>Web Design</p>
         </div>
         <div class="project-card">
             <img src="Project c.png" alt="Project C">
-            <p>Project C</p>
+            <p class="project-name">Project C</p>
             <p>Illustration</p>
         </div>
         </div>
-        <div class="row2">
+        <div class="row">
         <div class="project-card">
             <img src="Project D.png" alt="Project D">
-            <p>Project D</p>
+            <p class="project-name">Project D</p>
             <p>Branding</p>
         </div>
         <div class="project-card">
             <img src="Project E.png" alt="Project E">
-            <p>Project E</p>
+            <p class="project-name">Project E</p>
             <p>UI/UX Design</p>
         </div>
         <div class="project-card">
             <img src="Project F.png" alt="Project F">
-            <p>Project F</p> 
+            <p class="project-name">Project F</p> 
             <p>Animation</p>
         </div>
         </div>
-        <div class="row3">
+        <div class="row">
         <div class="project-card">
             <img src="Project G.png" alt="Project G">
-            <p>Project G</p> 
+            <p class="project-name">Project G</p> 
             <p>Photography</p>
         </div>
         <div class="project-card">
             <img src="Project H.png" alt="Project H">
-            <p>Project H</p>
+            <p class="project-name">Project H</p>
             <p>Print Design</p>
         </div>
         <div class="project-card">
             <img src="Project i.png" alt="Project I">
-            <p>Project I</p> 
+            <p class="project-name">Project I</p> 
             <p>Video Editing</p>
         </div>
         </div>
@@ -312,49 +338,102 @@
         </div>
     </section>
     </div>
+
+
+
     <section class="testimonials">
+
+
     <h2>What Clients Say</h2>
+
+
     <div class="testimonial-container">
+
+
+
       <div class="testimonial">
         <div class="above">
         <img src="avatar1.jpg" alt="Clara Bell" class="avatar">
+        <div class="text">
         <h3>Clara Bell</h3>
         <p class="position">CEO, Creative Co.</p>
         </div>
+        </div>
         <p class="feedback">Fantastic work! Highly recommend.</p>
       </div>
+
+
+
       <div class="testimonial">
         <div class="above">
         <img src="avatar2.jpg" alt="David Green" class="avatar">
+        <div class="text">
         <h3>David Green</h3>
         <p class="position">Marketing Director, Innovate Inc.</p>
         </div>
+        </div>
         <p class="feedback">Delivered beyond expectations.</p>
       </div>
+
+
+
+
       <div class="testimonial">
         <div class="above">
+
         <img src="avatar3.jpg" alt="Evelyn Hart" class="avatar">
+        <div class="text">
+
         <h3>Evelyn Hart</h3>
         <p class="position">Founder, Artistry Studio</p>
+
+        </div>
+
         </div>
         <p class="feedback">A true professional and talented designer.</p>
       </div>
+
+
+
       <div class="testimonial">
         <div class="above">
         <img src="avatar4.jpg" alt="Franklin Lee" class="avatar">
+        <div class="text">
         <h3>Franklin Lee</h3>
         <p class="position">Project Manager, Design Hub</p>
         </div>
+        </div>
         <p class="feedback">Creative and reliable. A pleasure to work with.</p>
       </div>
+
+
+
       <div class="testimonial">
         <div class="above">
         <img src="avatar5.jpg" alt="Grace Kim" class="avatar">
+        <div class="text">
         <h3>Grace Kim</h3>
         <p class="position">Owner, Graceful Designs</p>
         </div>
+        </div>
         <p class="feedback">Exceptional quality and attention to detail.</p>
       </div>
+
+
+      <div class="testimonial">
+        <div class="above">
+        <img src="avatar6.jpg" alt="Henry Brown" class="avatar">
+        <div class="text">
+        <h3>Henry Brown</h3>
+        <p class="position">CTO, Tech Solutions</p>
+        </div>
+        </div>
+        <p class="feedback">Highly skilled and professional.</p>
+      </div>
+
+
+
+
     </div>
   </section>
     <div class="divider"></div>
