@@ -6,216 +6,397 @@
     <title>MyPortfolio</title>
     <link href="https://fonts.cdnfonts.com/css/syne?styles=169887,24852,24853" rel="stylesheet">
     <link href="https://fonts.cdnfonts.com/css/familjen-grotesk?styles=170750" rel="stylesheet">
-                
-                
-             
     <style>
         body {
-            margin: 0;
-            padding: 0 48px;
-            font-family: 'Syne', sans-serif;
-            background-color: #ECF6FE;
-            color: #381664;
-        }
+    margin: 0;
+    padding: 0;
+    font-family: 'Syne', sans-serif;
+    background-color: #ECF6FE;
+    color: #381664;
+    box-sizing: border-box; 
+}
 
-        .navbar {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 20px;
-        }
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+    flex-wrap: wrap;
+    margin: 0 20px;
+}
 
-        .logo_text {
-            font-size: 24px;
-            font-weight: 900;
-        }
-        .divider{
-            border: 0.1px solid #440A8F;
-            left: 0;
-            position: absolute;
-            width: 100vw;
-        }
-        .pageLinks {
-            display: flex;
-            list-style: none;
-            gap: 24px;
-            margin: 0;
-            padding: 0;
-        }
+.logo_text {
+    font-size: 24px;
+    font-weight: 900;
+    margin: 0;
+}
 
-        .pageLinks li a {
-            text-decoration: none;
-            color: #381664;
-            font-weight: 400;
-            font-size: 16px;
-        }
-        .hero {
-            
-            text-align: center;
-        }
+.divider {
+    border: 0.1px solid #440A8F;
+    position: absolute;
+    left: 0;
+    width: 100vw;
+}
 
-        .hero h1 {
-            font-size: 120px;
-            font-weight: 700;
-        }
+.pageLinks {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+    margin: 0;
+    padding: 0;
+    flex-wrap: wrap; 
+}
 
-        .hero img {
-            max-width: 100%;
-            border: 1px solid #440A8F;
-        }
+.pageLinks li a {
+    text-decoration: none;
+    color: #381664;
+    font-weight: 400;
+    font-size: 16px;
+    padding: 0 10px; 
+}
 
-        .projects {
-            margin-top: 20px;
-            display: flex;
-            flex-direction: column;
-            gap: 30px;
-        }
-        .row{
-            display: flex;
-            gap: 30px;
-        }
+.hero {
+    text-align: center;
+    padding: 60px 20px;
+}
 
-        .project-card {
-            text-align: left;
-            margin-top: 20px;
-        }
+.hero h1 {
+    font-size: 120px;
+    font-weight: 700;
+    margin: 0;
+}
 
-        .project-card img {
-            border: 1px solid #440A8F;
-            max-width: 100%;
-        }
+.hero img {
+    max-width: 100%;
+    border: 1px solid #440A8F;
+    margin-top: 20px;
+}
 
-        .project-card p {
-            margin: 10px 0 0;
-            font-size: 14px;
-            font-weight: 500;
-        }
-        .project-name{
-            font-size: 200px;
-        }
-        .about {
-            font-size: 50px;
-            text-align: center;
-            padding: 40px;
-        }
+.projects {
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
 
-        .column{
-            display: flex;
-            gap: 45px;
-        }
-        .ImpactMetris{
-            padding: 0;
-            display: flex;
-            justify-content: space-between;
-            }
-        .ImpactMetris2{
-            font-size: 28px;
-        }
-        .highlight {
-            border-top: 0.1px solid #381664;
-            text-align: left;
-            width: 156px;
-            padding-top: 15px;
-            padding-bottom: 35px;
-        }
-        .highlight p{
-            
-            font-size: 12px;
-            margin: 1px;
-        }
-        .highlight h3{
-            font-size: 30px;
-            margin: 1px;
-        }
-        .testimonials  h2 {
-            text-align: center;
-            font-size: 2rem;
-            color: #2a075b; 
-            margin: 1rem 0;
-        }
+.row {
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap; 
+    margin: 0 20px;
+}
 
-        .testimonials {
-            padding: 2rem;
-        }
-        .testimonial-container {
-            height: 204px;
-            width: 90vw;
-            display: flex;
-            overflow-x: scroll;
+.project-card {
+    text-align: left;
+    margin-top: 20px;
+    flex: 1 0 30%; 
+    padding: 15px;
+    box-sizing: border-box; 
+}
 
-            gap: 1.5rem;
-        }
+.project-card img {
+    border: 1px solid #440A8F;
+    max-width: 100%;
+}
 
-        .testimonial {
-            font-family: 'Familjen Grotesk', sans-serif;                                   
-            font-weight: 400;
-            display: flex;
-            flex-direction: column;
-            background-color: #FFFFFF;
-            border-radius: 20px;
-            padding: 8px;
-          
-            width: 250px;
-            border: 1px solid #440A8F;
-        }
-        .above{
-            display: flex;
-            gap: 20px;
-        }
-        .text{
-            
-            font-size: 12px;
-            display: flex;
-            flex-direction: column;
-            gap: 0;
-            justify-content: center;
-        }
-       
-        .testimonial img.avatar {
-          width: 60px;
-          height: 60px;
-          border-radius: 50%;
-          border: 1px solid #440A8F
-        }
-        
-        .testimonial h3 {
-        font-weight: 600;
-        margin: 0;
-        color: #2a075b;
-        line-height: 12px;
-        }
-        
-        .testimonial .position {
-          color: #381664
-          line-height: 12px;
-        }
-        
-        .testimonial .feedback {
-            margin-left: 32px;
-            padding-left: 40px;
-            border-left: 1px solid #440A8F;
-            font-weight: 400;
-            font-size: 20px;
-          color: #381664;
-        }
-        .footer {
-            display: flex;
-            justify-content: space-between;
-            text-align: center;
-            font-size: 14px;
-        }
+.project-card p {
+    margin: 10px 0 0;
+}
 
-        .contact-button {
-            margin-top: 20px;
-            padding: 10px 20px;
-            border: 2px solid #381664;
-            background-color: transparent;
-            color: #381664;
-            font-size: 14px;
-            cursor: pointer;
-            border-radius: 8px;
-            margin-bottom: 20px;
-        }     
+.project-name {
+    font-size: 20px;
+}
+
+.about {
+    font-size: 50px;
+    text-align: center;
+    padding: 40px;
+}
+
+.project-highlights {
+    display: flex;
+    flex-direction: column;
+    padding: 40px 20px;
+}
+
+.project-highlights h2 {
+    text-align: left;
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.project-details {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 10px;
+    flex-wrap: wrap; 
+    margin: 0 20px;
+}
+
+.project-details div {
+    text-align: left;
+    margin: 10px 0;
+}
+
+.project-details p {
+    margin: 4px 0;
+}
+
+.column {
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+    margin: 0 20px;
+    justify-content: space-between; 
+}
+
+.ImpactMetris {
+    margin-top: 80px;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap; 
+}
+
+.ImpactMetris2 {
+    font-size: 28px;
+}
+
+.highlight {
+    border-top: 0.1px solid #381664;
+    text-align: left;
+    width: 220px;
+    padding-top: 15px;
+    padding-bottom: 35px;
+    margin-bottom: 30px; 
+    flex: 1 1 30%; 
+}
+
+.highlight p {
+    font-size: 12px;
+    margin: 1px;
+}
+
+.highlight h3 {
+    font-size: 30px;
+    margin: 1px;
+}
+
+.testimonials h2 {
+    text-align: center;
+    font-size: 2rem;
+    color: #2a075b;
+    margin: 1rem 0;
+}
+
+.testimonials {
+    padding: 2rem 20px;
+    margin-bottom: 30px;
+}
+
+.testimonial-container {
+    height: 204px;
+    display: flex;
+    overflow-x: auto;
+    gap: 1.5rem;
+    padding-bottom: 20px;
+    margin-bottom: 40px;
+}
+
+.testimonial {
+    background-color: #FFFFFF;
+    border-radius: 20px;
+    padding: 15px;
+    width: fit-content;
+    border: 1px solid #440A8F;
+    flex: 0 0 auto;
+}
+
+.above {
+    display: flex;
+    gap: 20px;
+    width: fit-content;
+}
+
+.text {
+    font-size: 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    justify-content: center;
+}
+
+.testimonial img.avatar {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    border: 1px solid #440A8F;
+}
+
+.testimonial h3 {
+    font-weight: 600;
+    margin: 0;
+    color: #2a075b;
+}
+
+.testimonial .position {
+    color: #381664;
+}
+
+.testimonial .feedback {
+    margin-top: 10px;
+    margin-left: 30px;
+    width: 45%;
+    border-left: 1px solid #440A8F;
+    font-weight: 400;
+    font-size: 20px;
+    color: #381664;
+    padding-left: 48px;
+}
+
+.footer {
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    font-size: 14px;
+    padding-top: 60px;
+}
+
+.contact-button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    border: 2px solid #381664;
+    background-color: transparent;
+    color: #381664;
+    font-size: 14px;
+    cursor: pointer;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}  
+
+@media (max-width: 1024px) {
+    .pageLinks {
+        gap: 24px;
+    }
+
+    .hero h1 {
+        font-size: 5rem;
+    }
+
+    .ImpactMetris2 {
+        font-size: 2rem;
+    }
+
+    .testimonial-container {
+        gap: 2rem;
+    }
+
+    .footer {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .highlight {
+        width: 100%; 
+        margin-bottom: 20px;
+    }
+
+    .about {
+        font-size: 35px;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 4.5rem;
+    }
+    .about {
+        font-size: 2rem;
+    }
+
+    .ImpactMetris {
+        align-items: center;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .highlight {
+        width: 100%; 
+        margin-bottom: 20px;
+    }
+
+    .project-card {
+        flex: 1 0 100%; 
+    }
+    
+    .column {
+        gap: 25px;
+    }
+
+    .pageLinks {
+        flex-direction: column; 
+        align-items: center; 
+    }
+    .projects{
+        margin-left: 3.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero h1 {
+        font-size: 2rem;
+    }
+
+    .about {
+        font-size: 1.5rem;
+    }
+
+    .pageLinks {
+        font-size: 0.9rem;
+    }
+
+    .testimonial h3 {
+        font-size: 1rem;
+    }
+
+    .testimonial .feedback {
+        font-size: 0.9rem;
+    }
+
+    .highlight h3 {
+        font-size: 1.5rem;
+    }
+
+    .highlight p {
+        font-size: 0.9rem;
+    }
+
+    .project-card {
+        flex: 1 0 100%; 
+    }
+
+
+    .column {
+        gap: 25px;
+    }
+
+    .pageLinks {
+        flex-direction: column; 
+        align-items: center;
+    }
+    .projects{
+        margin-right: 3.5rem;
+    }
+}
+@media (max-width: 345px){
+    .navbar{
+        gap: 30px;
+    }
+    .testimonial{
+    height: fit-content;
+    }
+
+}
     </style>
 </head>
 <body>
@@ -232,58 +413,58 @@
 
     <section class="hero">
         <h1>Welcome to My Creative World</h1>
-        <img src="257c14c06e89bdd180305f36a9549319.png" alt="Creative Design">
+        <img src="hero.png" alt="Creative Design">
     </section>
 
     <section id="projects" class="projects">
         <div class="row">
         <div class="project-card">
-            <img src="7c6729b0a0d4978924744bb7c3d0e6d2.png" alt="Project A">
-            <p class="project-name">Project A </p>
+            <img src="Project A.png" alt="Project A">
+            <div class="project-name">Project A</div>
             <p>Graphic Design</p>
         </div>
         <div class="project-card">
             <img src="Project B.png" alt="Project B">
-            <p class="project-name">Project B </p>
+            <div class="project-name">Project B</div>
             <p>Web Design</p>
         </div>
         <div class="project-card">
             <img src="Project c.png" alt="Project C">
-            <p class="project-name">Project C</p>
+            <div class="project-name">Project C</div>
             <p>Illustration</p>
         </div>
         </div>
         <div class="row">
         <div class="project-card">
             <img src="Project D.png" alt="Project D">
-            <p class="project-name">Project D</p>
+            <div class="project-name">Project D</div>
             <p>Branding</p>
         </div>
         <div class="project-card">
             <img src="Project E.png" alt="Project E">
-            <p class="project-name">Project E</p>
+            <div class="project-name">Project E</div>
             <p>UI/UX Design</p>
         </div>
         <div class="project-card">
             <img src="Project F.png" alt="Project F">
-            <p class="project-name">Project F</p> 
+            <div class="project-name">Project F</div>
             <p>Animation</p>
         </div>
         </div>
         <div class="row">
         <div class="project-card">
             <img src="Project G.png" alt="Project G">
-            <p class="project-name">Project G</p> 
+            <div class="project-name">Project G</div>
             <p>Photography</p>
         </div>
         <div class="project-card">
             <img src="Project H.png" alt="Project H">
-            <p class="project-name">Project H</p>
+            <div class="project-name">Project H</div>
             <p>Print Design</p>
         </div>
         <div class="project-card">
             <img src="Project i.png" alt="Project I">
-            <p class="project-name">Project I</p> 
+            <div class="project-name">Project I</div>
             <p>Video Editing</p>
         </div>
         </div>
@@ -292,23 +473,22 @@
     <section id="about" class="about">
         <p>Hi, I'm a creative professional specializing in graphic design and web development. I love turning ideas into visually stunning and functional designs.</p>
     </section>
-
-    <section class="project-highlights" style="display: flex; flex-direction: column; padding: 40px;">
-        <h2 style="text-align: left; font-size: 1.5rem; margin-bottom: 10px;">Project Highlights</h2>
-        <div style="display: flex; justify-content: space-between; padding-top: 10px;">
-            <div style="text-align: left;">
-                <p style="margin: 4px 0;">Type of Work</p>
-                <p style="margin: 4px 0;">Graphic Design</p>
-                <p style="margin: 4px 0;">Web Design</p>
+    <section class="project-highlights">
+        <h2>Project Highlights</h2>
+        <div class="project-details">
+            <div>
+                <p>Type of Work</p>
+                <p>Graphic Design</p>
+                <p>Web Design</p>
             </div>
-            <div style="text-align: left;">
-                <p style="margin: 4px 0;">Team</p>
-                <p style="margin: 4px 0;">Alice Johnson</p>
-                <p style="margin: 4px 0;">Bob Smith</p>
+            <div>
+                <p>Team</p>
+                <p>Alice Johnson</p>
+                <p>Bob Smith</p>
             </div>
-            <div style="text-align: left;">
-                <p style="margin: 4px 0;">Date</p>
-                <p style="margin: 4px 0;">March 2023</p>
+            <div>
+                <p>Date</p>
+                <p>March 2023</p>
             </div>
         </div>
     </section>
@@ -442,4 +622,6 @@
         <button class="contact-button">Contact Me</button>
     </footer>
 </body>
+</html>
+
 </html>
